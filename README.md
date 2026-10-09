@@ -1,14 +1,12 @@
 # WebScrape AI
 
-**Give your AI agent clean data from the entire internet.**
-
-One line of code. Any URL. Structured JSON back. Built for AI agents.
+**Give your AI agent clean data from the web. One URL in, structured JSON out. Built for LLMs.**
 
 ## Why WebScrape AI?
 
-AI agents need clean data to think. But the internet is messy.
+AI agents need clean data to think. But the web is messy.
 
-- ✅ **One URL in, clean JSON out** - Title, main text, links, images, metadata
+- ✅ **One URL in, clean JSON out** - Title, text, links, images
 - ✅ **Built for AI agents** - No noise, just structured data
 - ✅ **Handles anti-bot** - Real browser headers, follows redirects
 - ✅ **Batch mode** - Scrape 100 URLs at once
@@ -19,13 +17,10 @@ AI agents need clean data to think. But the internet is messy.
 ```python
 from webscrape_ai import scrape
 
-# Scrape any URL
 result = scrape('https://example.com')
-
-print(result['title'])        # Page title
-print(result['text'])          # Clean main text
-print(result['links'])         # All links
-print(result['images'])        # All images
+print(result['title'])    # Page title
+print(result['text'])      # Clean main text
+print(result['links'])     # All links
 ```
 
 ## Output Format
@@ -35,34 +30,10 @@ print(result['images'])        # All images
   "url": "https://example.com",
   "status": 200,
   "title": "Example Domain",
-  "description": "This domain is for use in illustrative examples...",
-  "text": "Example Domain\nThis domain is for use in illustrative examples...",
-  "links": [
-    {
-      "text": "More information...",
-      "url": "https://www.iana.org/domains/example"
-    }
-  ],
-  "images": [],
-  "metadata": {
-    "og:title": "Example Domain",
-    "og:description": "This domain is for use..."
-  }
+  "text": "Example Domain\nThis domain is for use...",
+  "links": [{"text": "More info", "url": "https://iana.org"}],
+  "images": []
 }
-```
-
-## Batch Scraping
-
-```python
-from webscrape_ai import scrape_batch
-
-urls = [
-    'https://example.com',
-    'https://google.com',
-    'https://github.com'
-]
-
-results = scrape_batch(urls)
 ```
 
 ## Use Cases
@@ -71,7 +42,6 @@ results = scrape_batch(urls)
 - **RAG Systems** - Build knowledge bases from any website
 - **Competitive Monitoring** - Track competitors' websites
 - **Content Research** - Extract articles and blog posts
-- **Data Pipelines** - Feed structured data to your workflows
 
 ## Installation
 
@@ -79,18 +49,11 @@ results = scrape_batch(urls)
 pip install -r requirements.txt
 ```
 
-## Why Not Just Use BeautifulSoup?
+## Why Not Just BeautifulSoup?
 
-Because you're an AI agent, not a web scraping expert.
+Because you're an AI agent, not a scraping expert.
 
-WebScrape AI handles:
-- ✅ Anti-bot detection (real browser headers)
-- ✅ Redirect following
-- ✅ Main content extraction (strips nav/footer/ads)
-- ✅ Clean text output (no garbage)
-- ✅ Structured JSON (ready for LLMs)
-
-You just need one thing: clean data. We handle the rest.
+WebScrape AI handles anti-bot, redirects, main content extraction, and clean output. You just need clean data.
 
 ## Star History
 
