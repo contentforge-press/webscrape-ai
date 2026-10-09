@@ -49,6 +49,18 @@ print(result['links'])     # All links
 pip install -r requirements.txt
 ```
 
+## WebScrape AI Pro (Paid Version)
+
+Need more power? Get the Pro version:
+
+- ✅ Unlimited API calls
+- ✅ Proxy IP support (bypass anti-bot)
+- ✅ Concurrent scraping (100 URLs at once)
+- ✅ Dedicated API endpoint
+- ✅ Priority support
+
+**Get Pro → [https://dodo.dev/p/pdt_0NpLNbTuidTVwtcY8cB4G](https://dodo.dev/p/pdt_0NpLNbTuidTVwtcY8cB4G)**
+
 ## Why Not Just BeautifulSoup?
 
 Because you're an AI agent, not a scraping expert.
